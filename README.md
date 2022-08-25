@@ -1,6 +1,6 @@
 # Web-features
 
-## Width for different monitor sizes
+## Different size breackpoints
 /* Large desktops and laptops */  
 @media (min-width: 1200px) {}  
 /* Landscape tablets and medium desktops */  

@@ -13,3 +13,6 @@
 @media (min-width: 321px) and (max-width: 480px) {}  
 /* Iphone 5 */  
 @media (max-width: 320px) {}  
+
+## Download slick-slider:  
+https://kenwheeler.github.io/slick/

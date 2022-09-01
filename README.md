@@ -19,8 +19,9 @@ https://kenwheeler.github.io/slick/
 
 ## Variables in CSS:
 In class:  
-.class{--field: value;}  
-In global:  
-:root{--field: value;}  
-*:root - find root element (html)  
-
+.class{--variable: value;}  
+Global:  
+:root{--variable: value;}  
+*:root - find root element (html)*
+Apply field:  
+.class{field: var(--variable);}

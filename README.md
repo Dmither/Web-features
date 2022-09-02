@@ -34,4 +34,6 @@ Apply field:
 .class{field: var(--variable);}
 
 ### Content on a 100% height:
-`<html style="height: 100%">   <body style="height: 100%">   <div class="wrapper" style="display: flex; flex-direction: column; height: 100%"`
+`<html style="height: 100%">  
+<body style="height: 100%">  
+<div class="wrapper" style="display: flex; flex-direction: column; height: 100%"`

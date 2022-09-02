@@ -1,6 +1,6 @@
 # Web-features
 
-## Different size breackpoints
+### Different size breackpoints
 /* Large desktops and laptops */  
 @media (min-width: 1200px) {}  
 /* Landscape tablets and medium desktops */  
@@ -14,10 +14,17 @@
 /* Iphone 5 */  
 @media (max-width: 320px) {}  
 
-## Download slick-slider:  
+Extra small         None  <576px
+Small               sm 	  ≥576px
+Medium 	            md 	  ≥768px
+Large 	            lg 	  ≥992px
+Extra large 	      xl 	  ≥1200px
+Extra extra large 	xxl 	≥1400px
+
+### Download slick-slider:  
 https://kenwheeler.github.io/slick/
 
-## Variables in CSS:
+### Variables in CSS:
 In class:  
 .class{--variable: value;}  
 Global:  
@@ -25,3 +32,8 @@ Global:
 *:root - find root element (html)*
 Apply field:  
 .class{field: var(--variable);}
+
+### Content on a 100% height:
+<html style="height: 100%">
+<body style="height: 100%">
+<div class="wrapper" style="display: flex; flex-direction: column; height: 100%"

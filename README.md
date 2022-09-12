@@ -37,3 +37,19 @@ Apply field:
 `<html style="height: 100%">`  
 `<body style="height: 100%">`  
 `<div class="wrapper" style="display: flex; flex-direction: column; height: 100%"`
+
+###Create burger-menu:
+1. Create header html:
+- add logo;
+- add navbar, it contains navbar-list for links, buttons, else;
+- add div burger with one span and onclick function.
+2. Style header for desctop:
+- header-wrapper, navbar, navbar-list display: flex;
+- burger's span add :before and :after elements in burger;
+- burger display: none.
+3. Style changes for mobile sizes:
+- change navbar, navbar-list flex-direction and other style;
+- for navbar add position: fixed (absolute) and start position (top: -100%);
+- add burger display: block.
+4. Add style classes for open menu: navbar-open position, burger span rotate
+5. Add Js function for click on burger: navbar and burger toggle classes -open

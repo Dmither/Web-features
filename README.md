@@ -38,7 +38,7 @@ Apply field:
 `<body style="height: 100%">`  
 `<div class="wrapper" style="display: flex; flex-direction: column; height: 100%"`
 
-###Create burger-menu:
+### Create burger-menu:
 1. Create header html:
 - add logo;
 - add navbar, it contains navbar-list for links, buttons, else;

@@ -43,13 +43,17 @@ Apply field:
 - add logo;
 - add navbar, it contains navbar-list for links, buttons, else;
 - add div burger with one span and onclick function.
-2. Style header for desctop:
+2. Style header for desktop:
 - header-wrapper, navbar, navbar-list display: flex;
 - burger's span add :before and :after elements in burger;
 - burger display: none.
 3. Style changes for mobile sizes:
 - change navbar, navbar-list flex-direction and other style;
-- for navbar add position: fixed (absolute) and start position (top: -100%);
+- for navbar add position: fixed (absolute) and top: -100%;
 - add burger display: block.
 4. Add style classes for open menu: navbar-open position, burger span rotate
-5. Add Js function for click on burger: navbar and burger toggle classes -open
+5. Add js function for click on burger: navbar and burger toggle classes -open
+6. Optional, if header is fixed:
+- add menu copy above the header (menu-mobile)
+- copy menu style to menu-mobile
+- change menu-selector in js to menu-mobile

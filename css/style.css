@@ -1,0 +1,134 @@
+@import url(reset.css);
+:root {
+  --main-bg-color: bisque;
+  --second-bg-color: chocolate;
+  --main-color: brown;
+}
+
+.container {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+.header__wrap {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--second-bg-color);
+}
+
+.menu, .menu-mobile {
+  display: flex;
+  gap: 30px;
+  transition-duration: 0.2s;
+}
+.menu__link, .menu-mobile__link {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.burger span {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main-color);
+  transition-duration: 0.2s;
+}
+.burger span:nth-child(1) {
+  top: 2px;
+}
+.burger span:nth-child(2) {
+  top: 13px;
+}
+.burger span:nth-child(3) {
+  bottom: 2px;
+}
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  .burger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    padding: 65px 15px 15px;
+    background-color: var(--main-bg-color);
+    opacity: 0.9;
+  }
+  .menu-mobile__link {
+    font-size: 24px;
+  }
+}
+.burger_open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+  width: 35px;
+}
+.burger_open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.burger_open span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 13px;
+  width: 35px;
+}
+
+.menu_open {
+  right: 0px;
+}
+
+.main {
+  margin-top: 50px;
+}/*# sourceMappingURL=style.css.map */

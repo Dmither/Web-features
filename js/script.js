@@ -16,6 +16,7 @@ document.querySelectorAll('.checkbox').forEach(function(elem){
       event.target.querySelector('input').checked = false;
     } else {event.target.querySelector('input').checked = true;}
     event.target.classList.toggle('checkbox_active');
+    event.preventDefault();
   })
 })
 
@@ -30,5 +31,6 @@ document.querySelectorAll('.radio').forEach(function(elem){
     })
     event.target.querySelector('input').checked = true;
     event.target.classList.add('radio_active')
+    event.preventDefault();
   })
 })

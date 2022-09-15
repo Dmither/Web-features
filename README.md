@@ -58,3 +58,19 @@ Apply field:
 - copy menu style to menu-mobile
 - change menu-selector in js to menu-mobile
 !Important! All content must be wrap in relative div
+
+
+### Style checkbox and radio-buttons
+1. Create html base:
+- create form object;
+- add wrap-block with label (no tags) and input.
+! checkbox must have type and name; radio also value
+2. Add js logic:
+- select all of targeted inputs and add foreach func;
+- add class active to checked inputs on start;
+- add listener on click change checked attr and toggle .active.
+3. Style inputs fields:
+
+
+
+

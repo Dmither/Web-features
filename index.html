@@ -8,67 +8,69 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="menu-mobile">
-    <a href="" class="menu__link">Lorem</a>
-    <a href="" class="menu__link">Totam</a>
-    <a href="" class="menu__link">Incidunt</a>
-    <a href="" class="menu__link">Illum</a>
-  </nav>
-  <header class="header">
-    <div class="container">
-      <div class="header__wrap">
-        <div class="logo"></div>
-        <nav class="menu">
-          <a href="" class="menu__link">Lorem</a>
-          <a href="" class="menu__link">Totam</a>
-          <a href="" class="menu__link">Incidunt</a>
-          <a href="" class="menu__link">Illum</a>
-        </nav>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+  <div class="wrapper">
+    <nav class="menu-mobile">
+      <a href="" class="menu__link">Lorem</a>
+      <a href="" class="menu__link">Totam</a>
+      <a href="" class="menu__link">Incidunt</a>
+      <a href="" class="menu__link">Illum</a>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="logo"></div>
+          <nav class="menu">
+            <a href="" class="menu__link">Lorem</a>
+            <a href="" class="menu__link">Totam</a>
+            <a href="" class="menu__link">Incidunt</a>
+            <a href="" class="menu__link">Illum</a>
+          </nav>
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <main class="main">
-    <div class="container">
-      <form action="get" class="block-form">
-        <h2 class="block-form__title">Form elements style</h2>
-        <div class="block-form__item">
-          <div class="checkbox">
-            Checkbox #1
-            <input type="checkbox" checked name="checkbox_1">
-          </div>
-        </div>
-        <div class="block-form__item">
-          <div class="checkbox">
-            Checkbox #2
-            <input type="checkbox" name="checkbox_2">
-          </div>
-        </div>
-        <div class="block-form__item">
-          <div class="radiobuttons">
-            <div class="radio">
-              Variant #1
-              <input type="radio" name="radio" value="1" checked>
-            </div>
-            <div class="radio">
-              Variant #2
-              <input type="radio" name="radio" value="2">
-            </div>
-            <div class="radio">
-              Variant #3
-              <input type="radio" name="radio" value="3">
+    </header>
+    <main class="main">
+      <div class="container">
+        <form action="get" class="block-form">
+          <h2 class="block-form__title">Form elements style</h2>
+          <div class="block-form__item">
+            <div class="checkbox">
+              Checkbox #1
+              <input type="checkbox" checked name="checkbox_1">
             </div>
           </div>
-        </div>
-        <button class="button" type="submit"><span>Send form</span></button>
-      </form>
-      
-    </div>
-  </main>
+          <div class="block-form__item">
+            <div class="checkbox">
+              Checkbox #2
+              <input type="checkbox" name="checkbox_2">
+            </div>
+          </div>
+          <div class="block-form__item">
+            <div class="radiobuttons">
+              <div class="radio">
+                Variant #1
+                <input type="radio" name="radio" value="1" checked>
+              </div>
+              <div class="radio">
+                Variant #2
+                <input type="radio" name="radio" value="2">
+              </div>
+              <div class="radio">
+                Variant #3
+                <input type="radio" name="radio" value="3">
+              </div>
+            </div>
+          </div>
+          <button class="button" type="submit"><span>Send form</span></button>
+        </form>
+    
+      </div>
+    </main>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

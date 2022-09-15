@@ -67,7 +67,7 @@ Apply field:
 ! checkbox must have type and name; radio also value
 2. Add js logic:
 - select all of targeted inputs and add foreach func;
-- add class active to checked inputs on start;
+- add class active to checked inputs on page ready;
 - add listener on click change checked attr and toggle .active.
 3. Style inputs fields:
 

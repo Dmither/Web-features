@@ -160,6 +160,7 @@ html, body{
   }
 }
 .checkbox {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-size: 16px;
   line-height: 20px;
   padding-left: 70px;
@@ -208,6 +209,7 @@ html, body{
 
 }
 .radio{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: relative;
   padding-left: 50px;
   margin-bottom: 10px;

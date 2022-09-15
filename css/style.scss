@@ -4,6 +4,13 @@
   --main-bg-color: bisque;
   --second-bg-color: chocolate;
   --main-color: brown;
+  --disabled-color: #555;
+  --disabled-bg-color: #aaa;
+
+  
+  // color: darkcyan;
+  // color: darkred;
+  // color: gold;
 }
 html, body{
   height: 100%;
@@ -127,16 +134,15 @@ html, body{
 .main {
   background-color: #eee;
   margin-top: 50px;
-  &__wrap {
-    
-  }
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 .block-form {
+  padding: 15px 0;
   &__title {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    padding: 15px 0;
+    margin-bottom: 15px;
   }
   &__item {
     margin-bottom: 15px;
@@ -149,17 +155,18 @@ html, body{
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  color: #555;
+  color: var(--disabled-color);
   &::before{
     content: '';
     width: 50px;
     height: 20px;
     border-radius: 20px;
-    background-color: #999;
+    background-color: var(--disabled-bg-color);
     position: absolute;
     left: 0;
     top: 0;
     box-shadow: 0 0 3px rgba(51, 51, 51, 0.3);
+    transition: all 0.3s ease 0s;
   }
   &::after{
     content: '';
@@ -168,25 +175,91 @@ html, body{
     height: 30px;
     left: 0;
     top: -5px;
-    background-color: #999;
+    background-color: var(--disabled-bg-color);
     border-radius: 50%;
     box-shadow: 0 0 3px rgba(51, 51, 51, 0.3);
+    transition: all 0.3s ease 0s;
   }
   &_active{
     color: #000;
   }
   &_active::before{
-    color:forestgreen;
+    background-color:var(--second-bg-color);
   }
   &_active::after{
-    color: forestgreen;
+    background-color: var(--second-bg-color);
+    left: 20px;
   }
   label{}
   input{display: none;}
 }
 .radiobuttons {
-  &__item {
-  }
+
 }
+.radio{
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #555;
+  &::before{
+    content:'';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--disabled-bg-color);
+    box-shadow: 0 0 3px rgba(51, 51, 51, 0.3);
+    transition: all 0.3s ease 0s;
+    border-radius: 50%;
+  }
+  &::after{
+    content:'';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+    transition: all 0.3s ease 0s;
+    z-index: 2;
+  }
+  &_active{
+    color: #000;
+    &::before{
+      background-color: var(--second-bg-color);
+    }
+    &::after{
+      background-color: var(--main-bg-color);
+      box-shadow: 0 0 3px rgba(51, 51, 51, 0.3);
+    }
+  }
+  input{display: none;}
+}
+
 .button {
+  padding: 10px 15px;
+  background-color: var(--disabled-bg-color);
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  span{
+    position: relative;
+    z-index: 2;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    transition: all 0.3s ease 0s;
+  }
+  &:hover{
+    background-color: var(--second-bg-color);
+    span{color: var(--main-bg-color);}
+  }
 }

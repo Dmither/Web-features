@@ -33,6 +33,9 @@ Global:
 Apply field:  
 .class{field: var(--variable);}
 
+### Disable blue frame during tap on mobile
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 ### Content on a 100% height:
 `<html style="height: 100%">`  
 `<body style="height: 100%">`  
@@ -70,7 +73,8 @@ Apply field:
 - add class active to checked inputs on page ready;
 - add listener on click change checked attr and toggle .active.
 3. Style inputs fields:
-
-
-
+- wrap-block add position: relative; cursor: pointer;
+- add padding for own inputs, add own inputs like ::before and ::after
+- add active changes in _active class and _active::before/::after
+- disable standard inputs
 

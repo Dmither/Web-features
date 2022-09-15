@@ -16,7 +16,6 @@ document.querySelectorAll('.checkbox').forEach(function(elem){
       event.target.querySelector('input').checked = false;
     } else {event.target.querySelector('input').checked = true;}
     event.target.classList.toggle('checkbox_active');
-    event.preventDefault();
   })
 })
 
@@ -25,12 +24,12 @@ document.querySelectorAll('.radio').forEach(function(elem){
   if(elem.querySelector('input').checked){
     elem.classList.add('radio_active');
   }
+  // on click remove _active for all radio, target checked and _active
   elem.addEventListener('click', function(event){
     event.target.closest('.radiobuttons').querySelectorAll('.radio').forEach(function(elem){
       elem.classList.remove('radio_active');
     })
     event.target.querySelector('input').checked = true;
     event.target.classList.add('radio_active')
-    event.preventDefault();
   })
 })

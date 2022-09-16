@@ -67,12 +67,17 @@ html, body {
   transition-duration: 0.2s;
 }
 .menu__link, .menu-mobile__link {
+  position: relative;
+  z-index: 10;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--main-color);
+}
+.menu__link:hover, .menu-mobile__link:hover {
+  color: var(--second-bg-color);
 }
 
 .burger {
@@ -104,6 +109,8 @@ html, body {
 }
 .menu-mobile {
   display: none;
+  position: absolute;
+  z-index: 10;
 }
 
 @media (max-width: 479px) {
@@ -117,7 +124,6 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     top: 0;
     right: -100%;
     height: 100%;

@@ -6,23 +6,19 @@
   --main-color: brown;
   --disabled-color: #555;
   --disabled-bg-color: #aaa;
-
-  
-  // color: darkcyan;
-  // color: darkred;
-  // color: gold;
 }
 html, body{
   height: 100%;
+  padding: 0;
+  margin: 0;
   max-width: 100%;
-  overflow:hidden;
+  // background-color:#eee;
 }
+
 .wrapper{
   position: relative;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -39,6 +35,7 @@ html, body{
 }
 .header {
   position: fixed;
+  z-index: 50;
   top:0;
   width: 100%;
   background-color: var(--main-bg-color);
@@ -69,6 +66,7 @@ html, body{
     text-transform: uppercase;
     color: var(--main-color);
     &:hover{color: var(--second-bg-color)}
+    transition-duration: 0.2s;
   }
 }
 .burger {
@@ -97,14 +95,10 @@ html, body{
       bottom: 2px;
     }
   }
-  span{
-    
-  }
 }
-
 .menu-mobile{
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 10;
 }
 @media (max-width: 479px) {
@@ -207,11 +201,7 @@ html, body{
     background-color: var(--second-bg-color);
     left: 20px;
   }
-  label{}
   input{display: none;}
-}
-.radiobuttons {
-
 }
 .radio{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -260,8 +250,8 @@ html, body{
   }
   input{display: none;}
 }
-
 .button {
+  margin-bottom: 15px;
   padding: 10px 15px;
   background-color: var(--disabled-bg-color);
   border-radius: 10px;
@@ -279,5 +269,49 @@ html, body{
   &:hover{
     background-color: var(--second-bg-color);
     span{color: var(--main-bg-color);}
+  }
+}
+
+.spoilers {
+  padding: 15px 0;
+  border-top: 1px solid var(--second-bg-color);
+  border-bottom:  1px solid var(--second-bg-color);
+}
+.spoiler {
+  margin-bottom: 15px;
+  transition: all 0.3s ease 0s;
+  &:last-child{margin-bottom: 0px;}
+  &__title {
+    padding-left: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &::before, &::after{
+      content: '';
+      width: 10px;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      top: 6px;
+      transition: all 0.3s ease 0s;
+    }
+    &::before{transform: rotate(40deg); left: 0;}
+    &::after{transform: rotate(-40deg); left: 8px;}
+  }
+  &__text {
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+  }
+  
+  &_active{
+    .spoiler__title{
+      margin-bottom: 8px;
+      color: var(--second-bg-color);
+      &::before, &::after{background-color: var(--second-bg-color);}
+      &::before{transform: rotate(-40deg);}
+      &::after{transform: rotate(40deg);}
+    }
   }
 }

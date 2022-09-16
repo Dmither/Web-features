@@ -36,12 +36,12 @@ Apply field:
 ### Disable blue frame during tap on mobile
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-### Content on a 100% height:
+### Content on a 100% height
 `<html style="height: 100%">`  
 `<body style="height: 100%">`  
 `<div class="wrapper" style="display: flex; flex-direction: column; height: 100%"`
 
-### Create burger-menu:
+### Create burger-menu
 1. Create header html:
 - add logo;
 - add navbar, it contains navbar-list for links, buttons, else;
@@ -78,3 +78,39 @@ Apply field:
 - add active changes in _active class and _active::before/::after
 - disable standard inputs
 
+### Style spoiler ???
+1. Create html spoiler > title, text, add .active to spoiler
+2. In js for each title add listener, which toggle .active to spoiler:
+- query all spoilers;
+- for each titles get spoiler-text height, and set it height 1px;
+- add listener on click, which toggle spoiler .active;
+- if spoiler contains .active, set spoiler-text height like on ready;
+- else - set spoiler-text height 1px;
+!!! if other spoilers should close, above set spoiler-text height
+  for each spoilers remove .active, set spoiler-text height 1px,
+  for targeted spoiler add .active !!!
+3. Style toggle-icon in title and height: 1px, overflow: hidden in text
+4. Change style on active.
+
+
+document.querySelectorAll('.spoiler__title').forEach(function(elem){
+  // for each titles get text height, and set height 1px
+  let spoiler = elem.closest('.spoiler');
+  var textHeight = spoiler.querySelector('.spoiler__text').clientHeight;
+  spoiler.querySelector('.spoiler__text').style.height = '1px';
+  // add listener
+  elem.addEventListener('click', function(event){
+    let spoiler = event.target.closest('.spoiler');
+    spoiler.classList.toggle('spoiler_active');
+    if(spoiler.classList.contains('spoiler_active')){
+      // -> if other spoilers should close
+      spoilers.forEach(function(elem){
+        elem.classList.remove('spoiler_active');
+        elem.querySelector('.spoiler__text').style.height = '1px';
+      }) 
+      spoiler.classList.add('spoiler_active');
+      // <--------------------------------
+      spoiler.querySelector('.spoiler__text').style.height = `${textHeight + 2}px`;
+    } else {spoiler.querySelector('.spoiler__text').style.height = '1px';}
+  })
+})

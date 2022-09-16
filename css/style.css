@@ -9,15 +9,13 @@
 
 html, body {
   height: 100%;
+  padding: 0;
+  margin: 0;
   max-width: 100%;
-  overflow: hidden;
 }
 
 .wrapper {
   position: relative;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -43,6 +41,7 @@ html, body {
 
 .header {
   position: fixed;
+  z-index: 50;
   top: 0;
   width: 100%;
   background-color: var(--main-bg-color);
@@ -75,6 +74,7 @@ html, body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--main-color);
+  transition-duration: 0.2s;
 }
 .menu__link:hover, .menu-mobile__link:hover {
   color: var(--second-bg-color);
@@ -107,9 +107,10 @@ html, body {
 .burger span:nth-child(3) {
   bottom: 2px;
 }
+
 .menu-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 10;
 }
 
@@ -271,6 +272,7 @@ html, body {
 }
 
 .button {
+  margin-bottom: 15px;
   padding: 10px 15px;
   background-color: var(--disabled-bg-color);
   border-radius: 10px;
@@ -291,4 +293,60 @@ html, body {
 }
 .button:hover span {
   color: var(--main-bg-color);
+}
+
+.spoilers {
+  padding: 15px 0;
+  border-top: 1px solid var(--second-bg-color);
+  border-bottom: 1px solid var(--second-bg-color);
+}
+
+.spoiler {
+  margin-bottom: 15px;
+  transition: all 0.3s ease 0s;
+}
+.spoiler:last-child {
+  margin-bottom: 0px;
+}
+.spoiler__title {
+  padding-left: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.spoiler__title::before, .spoiler__title::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 6px;
+  transition: all 0.3s ease 0s;
+}
+.spoiler__title::before {
+  transform: rotate(40deg);
+  left: 0;
+}
+.spoiler__title::after {
+  transform: rotate(-40deg);
+  left: 8px;
+}
+.spoiler__text {
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+}
+.spoiler_active .spoiler__title {
+  margin-bottom: 8px;
+  color: var(--second-bg-color);
+}
+.spoiler_active .spoiler__title::before, .spoiler_active .spoiler__title::after {
+  background-color: var(--second-bg-color);
+}
+.spoiler_active .spoiler__title::before {
+  transform: rotate(-40deg);
+}
+.spoiler_active .spoiler__title::after {
+  transform: rotate(40deg);
 }/*# sourceMappingURL=style.css.map */

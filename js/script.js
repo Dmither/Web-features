@@ -141,3 +141,4 @@ next.addEventListener('click', function(event){
   nextElement.classList.add('slider__image_next');
 })
 }
+

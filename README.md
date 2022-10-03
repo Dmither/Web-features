@@ -63,6 +63,14 @@ Apply field:
   
 !!! All content must be wrap in relative div
 !!! Add z-index in menu-links
+### Alternate burger-menu
+1. Style desktop:
+- header fixed (sticky) t0 l0 w100% zi50;
+- substrate for header (optional): header::before absolute t0 l0 w100% h100%.
+2. Style mobile (@): header-menu fixed t0 l0 w100% h100% under substrate.
+3. Script: burger-click toggle burger and menu active-class
+additionally, lock scroll while menu is open (toggle body overflow: hidden),
+add menu scroll overflow: auto.
 
 ### Style checkbox and radio-buttons
 1. Create html base:

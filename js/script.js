@@ -142,3 +142,32 @@ next.addEventListener('click', function(event){
 })
 }
 
+// parallax bg
+{
+  window.onload = function(){
+    const parallax = document.querySelector('.parallax');
+    if (parallax) {
+      const bg = document.querySelector('.parallax__background');
+      console.log(bg);
+      const speed = 0.05;
+  
+      let positionX = 0;
+      let coordXpercent = 0;
+  
+      function setMouseParallax(){
+        const distX = coordXpercent - positionX;
+  
+        positionX += (distX*speed);
+        bg.style.cssText = `transform: translate(${-positionX / 20}%);`;
+        requestAnimationFrame(setMouseParallax);
+      }
+      setMouseParallax();
+  
+      parallax.addEventListener("mousemove", function(e){
+        const parallaxWidth = parallax.offsetWidth;
+        const coordX = e.pageX - parallaxWidth / 2;
+        coordXpercent = coordX / parallaxWidth * 100;
+      });
+    }
+  }
+}

@@ -1,0 +1,150 @@
+https://swiperjs.com/
+
+Базові мінімізовані файли:
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script src="js/swiper-bundle.min.js"></script>
+
+Основна html-конструкція:
+  '.swiper' - головний контейнер слайдера
+  '.swiper-wrapper' - обовёязкова оболонка вмісту
+  '.swiper-slide' - контейнер слайду (блок, текст, фото...)
+
+Для роботи потрібно створити структуру:
+  .swiper > .swiper-wrapper > .swiper-slide*n
+  та ініціалізувати в скрипті: new Swiper('.sliderClass');
+
+!!! Для flex-елемента зі слайдером додати min-width: 0;
+!!! Для роботи в спочатку прихованому об'єкті ручне оновлення
+
+Параметри прописуються після класу слайдера:
+  new Swiper('.sliderClass', {   ...   });  //через кому
+
+Навігація розміщується поза .swiper-wrapper:
+  кнопки навігації:
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    стилі змінюються як іконочний шрифт для ::after класів
+    можна використовувати будь'який клас із іншими елементами
+
+  пагінація (булети, фракція, прогресбар):
+    pagination: {
+      el: '.swiper-pagination',  // обов'язково
+      
+      type: 'bullets',
+      clickable: true,        // чи клікабельні булети
+      dinamicBullets: false,  // динамічна зміна розміру
+      renderBullet: function(index, className){
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },    // функція перевизначає внутрішній об'єкт
+      
+      type: 'fraction',
+      renderBullet: function(currentClass, totalClass){
+        return ';
+      },
+
+      type: 'progressbar',
+    },
+    зміна стилів .swiper-pagination-bullet{},
+      .swiper-pagination-fraction{}, 
+      .swiper-pagination-progressbar-fill{}
+    !!! може мати лише один тип
+
+  скролбар:
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    зміна стилів .swiper-scrollbar{}, .swiper-scrollbar-drag{}
+
+Налаштування слайдера:
+  simulateTouth: true,  // дозволяє свайп мишою
+  touchRatio: 1,        // чутливість свайпу (0 вимк на всії ппристроях)
+  touchAngle: 45,       // кут спрацювання свайпу
+  grabCursor: true,     // зміна вигляду курсору (рука)
+  slideToClickedSlide: true,  // переключає на слайд по кліку
+  hashNavigation: {     // вмикає хеш-навігацію*
+    watchState: true,   // перемикання стрілками браузера
+  },
+  keyboard: {           // управління клавиатурою
+    enabled: true,      // вкл/викл
+    onlyInViewport: true, // тільки в межах в'юпорта
+    pageUpDown: true,   // клавішами pageUp, pageDown
+  },
+  mousewheel: {         // управління колесом миші
+    sensitivity: 1,     // чутливість
+    eventsTarget: '.sliderClass', // клас на якому спрацьовує
+  },
+  autoHeight: true      // автоналаштування висоти
+  slidesPerView: 1 ('auto'),  // к-ть слайдів для показа (можна дробове)
+  watchOverflow: true,  // відключити при недостатній кількості
+  spaceBetween: 30,     // відступи між слайдами (px)
+  slidesPerGroup: 1,    // к-ть слайдів для прокрутки
+  centeredSlides: true, // центрувати активний слайд
+  initialSlide: 0,      // номер стартового слайду (починається з 0)
+  slidesPerColumn: 1,   // к-ть рядів слайдів
+  loop: true,           // зациклена прокрутка
+  freeMode: true,       // прокрутка без прив'язки до слайдів
+  autoplay: {           // автопрокрутка
+    delay: 1000,        // затримка
+    stopOnLastSlide: true,  // стоп на останньому
+    disableOnInteraction: false,  // викл після ручного перемикання
+  },
+  speed: 300,           // швидкість перемикання
+  direction: 'vertical',  // змінює напрямок слайдера
+  effect: 'slide',      // ефект зміни ('fade', 'flip', 'cube', 'coverflow')
+  breakpoints: {        // адаптивність (mobile-first)
+    320: {              // @media (min-width: 320px)
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+
+  // лінива підгрузка слайдів
+  preloadImages: false, // викл предзавантаження зображень
+  lazy: {
+    loadOnTransitionStart: false, // підгрузка на старті перемикання
+    loadPrevNext: false,  // підгрузка попереднього та наступного 
+  },
+  watchSlidesProgress: true,    // слідкувати за видимими
+  watchSlidesVisibility: true,  // додати клас видимим
+  
+  zoom: {
+    maxRatio: 5,
+    minRatio: 1,
+  },
+  thumbs: {             // мініатюри (прев'ю)***
+    swiper: {           // свайпер з мініатюрами
+      el: '.previewClass',
+      slidesPreView: 4,
+    },
+  },
+  nested: true,         // для коректної роботи вкладеного слайдера
+  controller: {         // передача контролю іншому слайдеру
+    control: sliderVar,
+  },
+
+  observer: true,       // обновляє слайдер при зміні елементів
+  observeParents: true,     // при зміні ботьківських елементів слайдера
+  observeSlideChildren: true,   // при зміні дочірніх елементів слайду
+
+  * для хеш-навігації підключаємо кожному слайду атрибут data-hash="slide-name"
+  ** для лінивої підгрузки кожному слайду шлях прописати в data-scr="",
+    в src="" додати зображення 1*1px, додати клас "swiper-lazy";
+    ".swiper-lazy-preloader" виведе об'єкт до прогрузки
+  *** для мініатюр створюємо ще один слайдер з такою ж кількістю слайдів
+
+Зв'язати два слайдера:
+  поміщаємо слайдери в змінні (firstSlider, secondSlider),
+  передаємо контроль одного слайдера іншому:
+    firstSlider.controller.control = secondSlider;
+    secondSlider.controller.control = firstSlider;
+
+Паралакс ефект, віртуальні слайди, доступність, приклади:
+  https://www.youtube.com/watch?v=ddbxsrGPRY0&list=PLM6XATa8CAG4uCli-pMvuvwj46UaQoqIc&index=90

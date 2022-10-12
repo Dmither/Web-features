@@ -102,4 +102,12 @@ add menu scroll overflow: auto.
 3. Style toggle-icon in title and height: 1px, overflow: hidden in text
 4. Change style on active.
 
-
+### Fullscreen
+1. Add fullscreen block to html
+2. Add css style to html, body height: 100%
+3. Add css to block wrapper (main-block, container, else):
+- display: flex; flex-direction: column;
+- min-height: 100vh; (100% viewing area's height)
+4. Add css for fullscreen block:
+- min-height: 100vh;
+- width: 100%; (fix center in IE)

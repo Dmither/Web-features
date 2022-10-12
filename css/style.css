@@ -165,12 +165,62 @@ html, body {
   min-height: 100vh;
 }
 
+.fullscreen {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--disabled-bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
+.fullscreen__body {
+  background-color: var(--main-bg-color);
+  max-width: 480px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fullscreen__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.fullscreen__text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.fullscreen__link {
+  display: inline-block;
+  background-color: var(--second-bg-color);
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .slider {
   --swiper-theme-color: #fff;
   border-bottom: 2px solid #000;
 }
 .slider__wrapper {
-  height: 400px;
+  height: 200px;
+}
+@media (min-width: 480px) {
+  .slider__wrapper {
+    height: 300px;
+  }
+}
+@media (min-width: 767px) {
+  .slider__wrapper {
+    height: 400px;
+  }
 }
 .slider__slide {
   height: 400px;
@@ -207,7 +257,17 @@ html, body {
   width: 100%;
 }
 .slider-mini__wrapper {
-  height: 100px;
+  height: 50px;
+}
+@media (min-width: 480px) {
+  .slider-mini__wrapper {
+    height: 75px;
+  }
+}
+@media (min-width: 767px) {
+  .slider-mini__wrapper {
+    height: 100px;
+  }
 }
 .slider-mini__slide {
   height: 100px;
@@ -470,44 +530,4 @@ html, body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.fullscreen {
-  min-height: 100vh;
-  width: 100%;
-  background-color: var(--disabled-bg-color);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-align: center;
-}
-.fullscreen__body {
-  background-color: var(--main-bg-color);
-  max-width: 480px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.fullscreen__title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.fullscreen__text {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-.fullscreen__link {
-  display: inline-block;
-  background-color: var(--second-bg-color);
-  padding: 8px 16px;
-  border-radius: 10px;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

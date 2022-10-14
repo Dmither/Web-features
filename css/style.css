@@ -5,6 +5,8 @@
   --main-color: brown;
   --disabled-color: #555;
   --disabled-bg-color: #aaa;
+  --ice:rgb(30, 138, 210);
+  --forest: rgb(40, 153, 49);
 }
 
 html, body {
@@ -16,6 +18,16 @@ html, body {
 
 .wrapper {
   position: relative;
+}
+.wrapper_ice {
+  --main-bg-color: rgb(196, 228, 255);
+  --second-bg-color: var(--ice);
+  --main-color: rgb(33, 38, 112);
+}
+.wrapper_forest {
+  --main-bg-color: rgb(150, 182, 161);
+  --second-bg-color: var(--forest);
+  --main-color: rgb(8, 65, 27);
 }
 
 .container {
@@ -56,8 +68,13 @@ html, body {
 .logo {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: var(--second-bg-color);
+}
+.logo svg {
+  height: 100%;
+  width: 100%;
+}
+.logo svg path {
+  stroke: var(--second-bg-color);
 }
 
 .menu, .menu-mobile {

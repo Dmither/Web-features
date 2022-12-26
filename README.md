@@ -24,6 +24,9 @@ Extra extra large 	xxl 	≥1400px
 ### Download slick-slider:  
 https://kenwheeler.github.io/slick/
 
+### Proportions
+aspect-ratio: 100 / 50;
+
 ### Variables in CSS:
 In class:  
 .class{--variable: value;}  

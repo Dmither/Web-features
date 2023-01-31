@@ -1,5 +1,17 @@
 # Web-features
 
+### Plagins for VSCode
++ Auto Rename Tag (rename open or close tag like an opposite)
++ Auto Prefixer* (add prefixes)
++ CSS Peak (show CSS when hover on the HTML element)
++ eCSStractor* (extract the classes from HTML to CSS)
++ Google Fonts* (add fonts faster)
++ Live SASS Compiler* (compile SASS or SCSS to CSS)
+(Auto Prefixer needs setting a shortcut)
+(eCSStractor runs from context menu)
+(Google Fonts runs from command palette)
+(Live SASS Compiler toggle is on bottom panel)
+
 ### Different size breackpoints
 /* Large desktops and laptops */  
 @media (min-width: 1200px) {}  

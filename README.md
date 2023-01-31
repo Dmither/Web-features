@@ -6,12 +6,12 @@
 + CSS Peak (show CSS when hover on the HTML element)
 + eCSStractor* (extract the classes from HTML to CSS)
 + Google Fonts* (add fonts faster)
-+ Live SASS Compiler* (compile SASS or SCSS to CSS)
-Auto Prefixer needs setting a shortcut
-eCSStractor runs from context menu
-Google Fonts runs from command palette
-!!! Add "&display=wrap"
-Live SASS Compiler toggle is on bottom panel
++ Live SASS Compiler* (compile SASS or SCSS to CSS)  
+Auto Prefixer needs setting a shortcut  
+eCSStractor runs from context menu  
+Google Fonts runs from command palette  
+!!! Add "&display=wrap"  
+Live SASS Compiler toggle is on bottom panel  
 
 ### Different size breackpoints
 /* Large desktops and laptops */  

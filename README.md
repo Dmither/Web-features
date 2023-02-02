@@ -41,9 +41,10 @@ https://kenwheeler.github.io/slick/
 aspect-ratio: 100 / 50;
 
 ### Adaptive values for CSS styles:
-(for padding between 50px and 20px with starting vw 767px and final vw 320px)
-@media (max-width: 767px)
-padding: calc(20px + (50 - 20) * ((100vw - 320px) / (767 - 320)));
+(for padding between 50px and 20px with starting vw 767px and final vw 320px)  
+@media (max-width: 767px){  
+  padding: calc(20px + (50 - 20) * ((100vw - 320px) / (767 - 320)));  
+}  
 
 ### Variables in CSS:
 In class:  

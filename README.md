@@ -10,7 +10,7 @@
 Auto Prefixer needs setting a shortcut  
 eCSStractor runs from context menu  
 Google Fonts runs from command palette  
-!!! Add "&display=wrap"  
+!!! Add "&display=swap"  
 Live SASS Compiler toggle is on bottom panel  
 
 ### Different size breackpoints

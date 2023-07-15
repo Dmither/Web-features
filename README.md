@@ -40,6 +40,9 @@ https://kenwheeler.github.io/slick/
 ### Proportions
 aspect-ratio: 100 / 50;
 
+### Color mix
+mix-blend-mode: multiply;
+
 ### Adaptive values for CSS styles:
 (for padding between 50px and 20px with starting vw 767px and final vw 320px)  
 @media (max-width: 767px){  
